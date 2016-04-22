@@ -20,7 +20,25 @@ class TokenGateway extends AbstractGateway
             'accountNumber' => '',
             'privateKey' => '',
             'testMode' => false,
+            'demo' => false,
         );
+    }
+    
+        /**
+     * @return boolean
+     */
+    public function getDemoMode()
+    {
+        return $this->getParameter('demo');
+    }
+
+    /**
+     * @param  boolean $value
+     * @return $this
+     */
+    public function setDemoMode($value)
+    {
+        return $this->setParameter('demo', $value);
     }
 
     /**
